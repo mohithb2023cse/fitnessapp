@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.login-box {
+  position: relative;
+  width: 400px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #9a0f0f;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #d61b1b;
+  color: #8a1111;
+  outline: none;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #ac1a1a;
+  font-size: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -10px;
+  left: 5px;
+  font-size: 0.85rem;
+  color: #be1968;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #6a11cb;
+  background-image: linear-gradient(315deg, #6a11cb 0%, #2575fc 74%);
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-image: linear-gradient(315deg, #2575fc 0%, #6a11cb 74%);
+}
+
+.text-center button {
+  margin-top: 16px;
+  color: #ee1111;
+  font-size: 0.95rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.text-center button:hover {
+  color: #f1d1fa;
+}
+
+@media (max-width: 400px) {
+  .login-box {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .input-box input {
+    font-size: 0.95rem;
+  }
+
+  .input-box label {
+    font-size: 0.9rem;
+  }
+}
